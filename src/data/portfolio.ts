@@ -128,6 +128,94 @@ export const training = [
   }
 ];
 
+export const experienceDocuments = {
+  title: "Verified welding experience and training documents.",
+  intro:
+    "These documents support Putra's welder profile with employment certificates from PT Toyo Kanetsu Indonesia and formal welding training certificates from PT Global Sarana Internusa.",
+  items: [
+    {
+      src: "/media/experiences/employment-certificate-2025.jpeg",
+      title: "Certificate of Employment - 2025",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Welder role documentation covering April 26, 2025 to October 25, 2025.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/employment-certificate-2023.jpeg",
+      title: "Certificate of Employment - 2022/2023",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Welder role documentation covering December 26, 2022 to January 25, 2023.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/experience-document-01.jpeg",
+      title: "Certificate of Employment - 2024",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Industrial welding employment record for a project-based contract period.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/experience-document-02.jpeg",
+      title: "Certificate of Employment - 2024",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Additional welder employment documentation from PT Toyo Kanetsu Indonesia.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/experience-document-03.jpeg",
+      title: "Certificate of Employment",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Supporting certificate showing welder work history and completed contract status.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/experience-document-04.jpeg",
+      title: "Certificate of Employment",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Additional proof of industrial work experience as a welder.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/experience-document-05.jpeg",
+      title: "Certificate of Employment",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Documented work experience supporting the professional welder profile.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/experience-document-06.jpeg",
+      title: "Certificate of Employment",
+      issuer: "PT Toyo Kanetsu Indonesia",
+      label: "Employment",
+      detail: "Additional employment certificate for project-based welder experience.",
+      orientation: "portrait"
+    },
+    {
+      src: "/media/experiences/welding-training-smaw-6g.jpeg",
+      title: "Welding Training - SMAW 6G",
+      issuer: "PT Global Sarana Internusa",
+      label: "Training",
+      detail: "Certificate of completion for SMAW 6G welding training.",
+      orientation: "landscape"
+    },
+    {
+      src: "/media/experiences/welding-training-smaw-fcaw-3g-4g.jpeg",
+      title: "Welding Training - SMAW/FCAW GS 3G/4G",
+      issuer: "PT Global Sarana Internusa",
+      label: "Training",
+      detail: "Certificate of completion for SMAW/FCAW GS 3G/4G welding training.",
+      orientation: "landscape"
+    }
+  ]
+};
+
 export const projects = [
   {
     title: "Quality Consistency in Welding Work",

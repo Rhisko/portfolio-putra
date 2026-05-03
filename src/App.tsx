@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   ClipboardCheck,
   Download,
+  ExternalLink,
   FileText,
   Image,
   Mail,
@@ -24,6 +25,7 @@ import {
   careerObjective,
   documentation,
   experience,
+  experienceDocuments,
   highlights,
   navigation,
   profile,
@@ -255,6 +257,48 @@ function ExperienceSection() {
   );
 }
 
+function ExperienceDocumentsSection() {
+  return (
+    <section className="credentials-section">
+      <div className="section-wrap">
+        <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+          <SectionHeader eyebrow="Experience Credentials" title={experienceDocuments.title} copy={experienceDocuments.intro} />
+          <div className="credential-summary">
+            <span>{experienceDocuments.items.filter((item) => item.label === "Employment").length} employment documents</span>
+            <span>{experienceDocuments.items.filter((item) => item.label === "Training").length} training certificates</span>
+          </div>
+        </div>
+
+        <div className="credentials-grid">
+          {experienceDocuments.items.map((item) => (
+            <a
+              key={item.src}
+              href={assetPath(item.src)}
+              target="_blank"
+              rel="noreferrer"
+              className={item.orientation === "landscape" ? "credential-card credential-card-landscape group" : "credential-card group"}
+            >
+              <div className="credential-image">
+                <img src={assetPath(item.src)} alt={item.title} loading="lazy" />
+              </div>
+              <div className="credential-copy">
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p className="issuer">{item.issuer}</p>
+                <p>{item.detail}</p>
+                <strong>
+                  View document
+                  <ExternalLink size={14} />
+                </strong>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ProjectsSection() {
   return (
     <section id="projects" className="muted-section">
@@ -425,6 +469,7 @@ export default function App() {
         <ProfileSection />
         <SkillsSection />
         <ExperienceSection />
+        <ExperienceDocumentsSection />
         <ProjectsSection />
         <DocumentationSection />
         <ObjectiveSection />

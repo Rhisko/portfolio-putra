@@ -343,6 +343,80 @@ body {
     @apply mt-1 block text-xs font-semibold leading-5 text-zinc-300;
   }
 
+  .credentials-section {
+    background:
+      linear-gradient(90deg, rgba(32, 36, 33, 0.04) 1px, transparent 1px),
+      linear-gradient(rgba(32, 36, 33, 0.035) 1px, transparent 1px),
+      linear-gradient(135deg, #fffdf8, var(--cv-soft));
+    background-size: 44px 44px, 44px 44px, auto;
+  }
+
+  .credential-summary {
+    @apply grid gap-3 sm:grid-cols-2;
+  }
+
+  .credential-summary span {
+    @apply rounded-lg border bg-white/90 px-4 py-3 text-sm font-black uppercase text-zinc-800 shadow-lg backdrop-blur;
+    border-color: var(--cv-line);
+  }
+
+  .credentials-grid {
+    @apply grid gap-5 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .credential-card {
+    @apply overflow-hidden rounded-lg border bg-white shadow-xl transition duration-300 hover:-translate-y-1;
+    border-color: var(--cv-line);
+    box-shadow: 0 24px 72px rgba(32, 36, 33, 0.09);
+  }
+
+  .credential-card:hover {
+    border-color: rgba(217, 160, 0, 0.42);
+    box-shadow: 0 32px 92px rgba(32, 36, 33, 0.15);
+  }
+
+  .credential-image {
+    @apply flex h-[390px] items-center justify-center overflow-hidden bg-zinc-100 p-3;
+    background:
+      linear-gradient(135deg, rgba(255, 195, 26, 0.18), transparent 36%),
+      #f5f2ea;
+  }
+
+  .credential-card-landscape .credential-image {
+    @apply h-[260px];
+  }
+
+  .credential-image img {
+    @apply h-full w-full rounded-md object-contain transition duration-700 group-hover:scale-[1.025];
+    background: white;
+    box-shadow: 0 14px 34px rgba(32, 36, 33, 0.12);
+  }
+
+  .credential-copy {
+    @apply border-t p-5;
+    border-color: var(--cv-line);
+  }
+
+  .credential-copy span {
+    @apply inline-flex rounded-md bg-[color:var(--cv-yellow)] px-3 py-1 text-xs font-black uppercase text-zinc-950;
+  }
+
+  .credential-copy h3 {
+    @apply mt-3 text-lg font-black leading-tight text-zinc-950;
+  }
+
+  .credential-copy .issuer {
+    @apply mt-2 text-xs font-black uppercase text-[color:var(--cv-yellow-dark)];
+  }
+
+  .credential-copy p:not(.issuer) {
+    @apply mt-3 text-sm leading-6 text-zinc-600;
+  }
+
+  .credential-copy strong {
+    @apply mt-4 inline-flex items-center gap-2 text-sm font-black text-zinc-950;
+  }
+
   .case-card {
     @apply flex flex-col;
   }
