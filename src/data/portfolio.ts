@@ -242,14 +242,14 @@ export const projects = [
     process:
       "My field experience demonstrates discipline, reliability, coachability, and readiness to learn project-specific procedures and welding standards.",
     result:
-      "This profile is suitable for welder opportunities in fabrication, industrial projects, workshop production, construction support, or maintenance work."
+      "Suitable for welder roles in fabrication, industrial projects, workshop production, construction support, or maintenance work."
   }
 ];
 
 export const documentation = {
   title: "Visual documentation from field work and training environments.",
   intro:
-    "This documentation gives recruiters a clearer view of Putra's real work context: technical execution, safety equipment usage, teamwork, and quality-focused welding practice.",
+    "Field documentation showing technical execution, safety equipment usage, teamwork, and quality-focused welding practice.",
   video: {
     src: "/media/welding-documentation.mp4",
     poster: "/media/welding-process-01.jpeg",
@@ -303,7 +303,7 @@ export const documentation = {
       src: "/media/welding-detail.jpeg",
       title: "Detail-Oriented Output",
       label: "Detail",
-      description: "A focused view of work details, suitable for communicating quality mindset to non-technical recruiters."
+      description: "A focused view of welding details, showing precision, patience, and quality awareness."
     }
   ],
   proofPoints: ["Safety equipment awareness", "Hands-on technical execution", "Team collaboration", "Quality-oriented documentation"]

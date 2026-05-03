@@ -189,7 +189,7 @@ function SkillsSection() {
         <SectionHeader
           eyebrow="Skills"
           title="Welding capability supported by disciplined field execution."
-          copy="This portfolio highlights practical welding skills, safety awareness, SOP compliance, and work character that matter to recruiters, supervisors, and hiring managers seeking reliable welders."
+          copy="Practical welding capability backed by FCAW and SMAW training, safety awareness, SOP compliance, teamwork, and consistent attention to welding quality."
         />
         <div className="grid gap-5 lg:grid-cols-3">
           {skills.map((group, index) => {
@@ -306,7 +306,7 @@ function ProjectsSection() {
         <SectionHeader
           eyebrow="Project Highlights"
           title="Welding experience presented as proof of workmanship."
-          copy="These highlights translate field documentation into recruiter-friendly evidence of quality consistency, safety discipline, teamwork, and readiness for welder opportunities."
+          copy="Field documentation shows quality consistency, safety discipline, teamwork, and readiness to contribute in fabrication, workshop, construction, maintenance, or industrial welding environments."
         />
         <div className="grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
