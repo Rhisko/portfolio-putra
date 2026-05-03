@@ -131,7 +131,7 @@ export const training = [
 export const experienceDocuments = {
   title: "Verified welding experience and training documents.",
   intro:
-    "These documents support Putra's welder profile with employment certificates from PT Toyo Kanetsu Indonesia and formal welding training certificates from PT Global Sarana Internusa.",
+    "Verified employment and training records from PT Toyo Kanetsu Indonesia and PT Global Sarana Internusa, reflecting practical welding experience, formal technical preparation, and readiness for professional welder roles.",
   items: [
     {
       src: "/media/experiences/employment-certificate-2025.jpeg",
