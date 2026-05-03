@@ -143,14 +143,6 @@ function Hero() {
               <strong>{profile.role}</strong>
             </div>
           </div>
-          <div className="cv-card">
-            <img src={assetPath(profile.cvPreview)} alt="Preview CV Putra Shahara Vely" />
-          </div>
-          <div className="cv-signal">
-            <span>Discipline</span>
-            <span>Safety</span>
-            <span>Quality</span>
-          </div>
         </aside>
       </div>
     </section>

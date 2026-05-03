@@ -152,19 +152,20 @@ body {
   }
 
   .profile-portrait-card {
-    @apply relative z-20 grid gap-4 overflow-hidden rounded-lg border border-white/20 bg-white/[0.08] p-4 shadow-2xl shadow-black/30 backdrop-blur-xl md:grid-cols-[190px_1fr] md:items-end;
-    box-shadow: 0 28px 78px rgba(0, 0, 0, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    @apply relative z-20 overflow-hidden rounded-lg border border-white/20 bg-white/[0.08] p-5 shadow-2xl shadow-black/30 backdrop-blur-xl;
+    box-shadow: 0 34px 96px rgba(0, 0, 0, 0.3), 0 0 0 8px rgba(255, 255, 255, 0.045), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   .profile-portrait-card::before {
     @apply pointer-events-none absolute inset-0 content-[''];
     background:
       radial-gradient(circle at 18% 18%, rgba(255, 195, 26, 0.24), transparent 34%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 42%);
+      linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 42%),
+      linear-gradient(150deg, transparent 0 64%, rgba(255, 195, 26, 0.18) 64% 100%);
   }
 
   .portrait-frame {
-    @apply relative z-10 h-[245px] overflow-hidden rounded-lg border border-white/20 bg-zinc-950;
+    @apply relative z-10 h-[570px] overflow-hidden rounded-lg border border-white/20 bg-zinc-950;
     background:
       linear-gradient(135deg, rgba(255, 195, 26, 0.18), transparent 42%),
       linear-gradient(180deg, var(--cv-charcoal), var(--cv-black));
@@ -173,19 +174,19 @@ body {
   .portrait-frame::after {
     @apply pointer-events-none absolute inset-0 content-[''];
     background:
-      linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.36)),
+      linear-gradient(180deg, transparent 44%, rgba(0, 0, 0, 0.42)),
       radial-gradient(circle at 50% 18%, transparent 28%, rgba(0, 0, 0, 0.12));
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   }
 
   .portrait-frame img {
     @apply h-full w-full object-cover;
-    object-position: 50% 17%;
-    filter: saturate(0.62) contrast(1.05) brightness(0.94);
+    object-position: 50% 8%;
+    filter: saturate(0.68) contrast(1.06) brightness(0.94);
   }
 
   .portrait-caption {
-    @apply relative z-10 pb-1;
+    @apply absolute inset-x-5 bottom-5 z-10 rounded-lg border border-white/[0.14] bg-black/45 p-5 backdrop-blur-xl;
   }
 
   .portrait-caption span {
@@ -194,32 +195,6 @@ body {
 
   .portrait-caption strong {
     @apply mt-3 block text-2xl font-black leading-tight text-white;
-  }
-
-  .cv-card {
-    @apply relative overflow-hidden rounded-lg border border-white/25 bg-white/90 p-3 shadow-2xl shadow-black/30 backdrop-blur;
-    transform: rotate(0.8deg) translateX(18px);
-    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.32), 0 0 0 8px rgba(255, 255, 255, 0.045);
-  }
-
-  .cv-card::before {
-    @apply pointer-events-none absolute inset-0 z-10 content-[''];
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.28), transparent 28%, transparent 72%, rgba(255, 195, 26, 0.12));
-    mix-blend-mode: screen;
-  }
-
-  .cv-card img {
-    @apply h-[620px] w-full rounded-md object-cover object-top;
-  }
-
-  .cv-signal {
-    @apply mt-4 grid grid-cols-3 overflow-hidden rounded-lg border border-zinc-700 bg-zinc-900 text-center text-xs font-black uppercase text-zinc-950 shadow-xl;
-    transform: translateX(-18px);
-  }
-
-  .cv-signal span {
-    @apply px-2 py-4;
-    background: var(--cv-yellow);
   }
 
   .section-wrap {
@@ -564,7 +539,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .cv-card img {
+  .portrait-frame {
     height: 520px;
   }
 }
@@ -574,11 +549,11 @@ body {
     opacity: 0.3;
   }
 
-  .cv-card {
-    transform: none;
+  .portrait-frame {
+    height: 470px;
   }
 
-  .cv-card img {
-    height: 430px;
+  .portrait-caption {
+    @apply inset-x-4 bottom-4 p-4;
   }
 }

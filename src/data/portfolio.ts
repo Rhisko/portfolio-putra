@@ -13,7 +13,6 @@ export const profile = {
   phone: "0813-6561-7340",
   whatsapp: "6281365617340",
   cvUrl: "/Putra-Shahara-Vely-Professional-CV.docx",
-  cvPreview: "/assets/putra-cv-preview.png",
   profilePhoto: "/profile_picture.jpg"
 };
 
