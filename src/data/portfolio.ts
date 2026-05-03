@@ -12,7 +12,7 @@ export const profile = {
   email: "putrashahara29@gmail.com",
   phone: "0813-6561-7340",
   whatsapp: "6281365617340",
-  cvUrl: "/Putra-Shahara-Vely-Professional-CV.docx",
+  cvUrl: "/Putra-Shahara-Vely-CV.pdf",
   profilePhoto: "/profile_picture.jpg"
 };
 

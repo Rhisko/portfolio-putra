@@ -62,7 +62,7 @@ function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a href={assetPath(profile.cvUrl)} className="btn-outline" download>
-            Editable CV
+            CV
             <Download size={16} />
           </a>
           <a href={`https://wa.me/${profile.whatsapp}`} className="btn-primary">
@@ -84,7 +84,7 @@ function Navbar() {
             </a>
           ))}
           <a href={assetPath(profile.cvUrl)} download onClick={() => setOpen(false)}>
-            Download Editable CV
+            Download  CV
           </a>
         </div>
       ) : null}
@@ -116,7 +116,7 @@ function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href={assetPath(profile.cvUrl)} className="btn-primary" download>
-              Download Editable CV
+              Download CV
               <Download size={18} />
             </a>
             <a href="#contact" className="btn-ghost">
@@ -440,7 +440,7 @@ function ContactSection() {
             <span>{profile.location}</span>
           </div>
           <a href={assetPath(profile.cvUrl)} className="btn-primary mt-2" download>
-            Download Editable CV
+            Download CV
             <Download size={18} />
           </a>
         </div>
