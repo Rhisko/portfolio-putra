@@ -1,0 +1,447 @@
+import {
+  ArrowUp,
+  ArrowUpRight,
+  BadgeCheck,
+  CheckCircle2,
+  ClipboardCheck,
+  Download,
+  FileText,
+  Image,
+  Mail,
+  MapPin,
+  Menu,
+  Phone,
+  PlayCircle,
+  ShieldCheck,
+  Target,
+  UserRound,
+  Wrench
+} from "lucide-react";
+import { useState } from "react";
+
+import {
+  about,
+  careerObjective,
+  documentation,
+  experience,
+  highlights,
+  navigation,
+  profile,
+  projects,
+  reasonsToHire,
+  skills,
+  training,
+  values
+} from "./data/portfolio";
+
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
+function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="nav-shell">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+        <a href="#" className="flex items-center gap-3" aria-label={profile.name}>
+          <span className="brand-mark">PS</span>
+          <span>
+            <span className="block text-base font-black leading-5 text-zinc-950">{profile.shortName}</span>
+            <span className="block text-xs font-black uppercase text-zinc-500">Professional Portfolio</span>
+          </span>
+        </a>
+
+        <div className="hidden items-center gap-7 lg:flex">
+          {navigation.map((item) => (
+            <a key={item.href} href={item.href} className="nav-link">
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="hidden items-center gap-3 md:flex">
+          <a href={assetPath(profile.cvUrl)} className="btn-outline" download>
+            Editable CV
+            <Download size={16} />
+          </a>
+          <a href={`https://wa.me/${profile.whatsapp}`} className="btn-primary">
+            WhatsApp
+            <ArrowUpRight size={16} />
+          </a>
+        </div>
+
+        <button className="mobile-menu-button lg:hidden" type="button" aria-label="Open menu" onClick={() => setOpen(!open)}>
+          <Menu size={22} />
+        </button>
+      </nav>
+
+      {open ? (
+        <div className="mobile-menu mx-5 mb-4 lg:hidden">
+          {navigation.map((item) => (
+            <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+              {item.label}
+            </a>
+          ))}
+          <a href={assetPath(profile.cvUrl)} download onClick={() => setOpen(false)}>
+            Download Editable CV
+          </a>
+        </div>
+      ) : null}
+    </header>
+  );
+}
+
+function SectionHeader({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
+  return (
+    <div className="section-heading">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {copy ? <p>{copy}</p> : null}
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="hero-section">
+      <div className="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="text-white">
+          <p className="hero-pill">Field Discipline | Production Quality | Global Career Potential</p>
+          <h1 className="mt-6 text-5xl font-black leading-none md:text-7xl">{profile.name}</h1>
+          <p className="mt-5 max-w-3xl text-2xl font-black text-[color:var(--cv-yellow)] md:text-3xl">
+            {profile.positioning}
+          </p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-200">{profile.headline}</p>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href={assetPath(profile.cvUrl)} className="btn-primary" download>
+              Download Editable CV
+              <Download size={18} />
+            </a>
+            <a href="#contact" className="btn-ghost">
+              Contact Me
+              <Phone size={18} />
+            </a>
+          </div>
+
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {highlights.map((item) => (
+              <article key={item.label} className="hero-stat">
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <aside className="cv-showcase">
+          <div className="profile-portrait-card">
+            <div className="portrait-frame">
+              <img src={assetPath(profile.profilePhoto)} alt={`${profile.name} profile portrait`} />
+            </div>
+            <div className="portrait-caption">
+              <span>Professional Profile</span>
+              <strong>{profile.role}</strong>
+            </div>
+          </div>
+          <div className="cv-card">
+            <img src={assetPath(profile.cvPreview)} alt="Preview CV Putra Shahara Vely" />
+          </div>
+          <div className="cv-signal">
+            <span>Discipline</span>
+            <span>Safety</span>
+            <span>Quality</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
+function ProfileSection() {
+  return (
+    <section id="profile" className="section-wrap">
+      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <SectionHeader eyebrow="Profile" title={about.title} />
+          <div className="space-y-5 text-base leading-8 text-zinc-600">
+            {about.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {values.map((item, index) => {
+            const icons = [ClipboardCheck, ShieldCheck, BadgeCheck, CheckCircle2];
+            const Icon = icons[index] ?? CheckCircle2;
+            return (
+              <article key={item.title} className="feature-card">
+                <Icon className="text-[color:var(--cv-yellow)]" size={30} />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SkillsSection() {
+  return (
+    <section id="skills" className="muted-section">
+      <div className="section-wrap">
+        <SectionHeader
+          eyebrow="Skills"
+          title="Technical skills translated into operational value."
+          copy="This portfolio highlights transferable strengths so welding experience reads as relevant, credible, and useful for recruiters, HR teams, and hiring managers across publishing or production-driven companies."
+        />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {skills.map((group, index) => {
+            const icons = [Wrench, Target, UserRound];
+            const Icon = icons[index] ?? CheckCircle2;
+            return (
+              <article key={group.category} className={index === 1 ? "skill-card skill-card-featured" : "skill-card"}>
+                <Icon size={30} />
+                <h3>{group.category}</h3>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span key={item} className="tag">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ExperienceSection() {
+  return (
+    <section id="experience" className="section-wrap">
+      <SectionHeader eyebrow="Experience" title="Work experience and technical training based on the resume." />
+
+      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="space-y-5">
+          {experience.map((item) => (
+            <article key={item.company} className="timeline-card">
+              <p className="card-eyebrow">{item.company}</p>
+              <h3>{item.role}</h3>
+              <p className="date-badge">{item.period}</p>
+              <p className="mt-5 text-sm leading-7 text-zinc-600">{item.description}</p>
+              <ul className="impact-list">
+                {item.impact.map((impact) => (
+                  <li key={impact}>{impact}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="training-panel">
+          <p className="eyebrow">Training</p>
+          <h3>Welding Training - PT Global Sarana Internusa</h3>
+          <div className="mt-6 space-y-4">
+            {training.map((item) => (
+              <article key={item.title} className="training-row">
+                <FileText size={18} />
+                <div>
+                  <strong>{item.title}</strong>
+                  <span>{item.provider} | {item.date}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectsSection() {
+  return (
+    <section id="projects" className="muted-section">
+      <div className="section-wrap">
+        <SectionHeader
+          eyebrow="Project Highlights"
+          title="Field experience reframed as professional case studies."
+          copy="Because there are no publishing projects yet, technical work is positioned as evidence of work character, process quality, and adaptability."
+        />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <article key={project.title} className="case-card">
+              <p className="case-number">Case 0{index + 1}</p>
+              <h3>{project.title}</h3>
+              <p><strong>Challenge:</strong> {project.challenge}</p>
+              <p><strong>Process:</strong> {project.process}</p>
+              <p><strong>Result:</strong> {project.result}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DocumentationSection() {
+  return (
+    <section id="documentation" className="documentation-section">
+      <div className="section-wrap">
+        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+          <SectionHeader eyebrow="Work Documentation" title={documentation.title} copy={documentation.intro} />
+          <div className="proof-strip">
+            {documentation.proofPoints.map((point) => (
+              <span key={point}>
+                <CheckCircle2 size={16} />
+                {point}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="documentation-layout">
+          <article className="video-feature">
+            <div className="video-frame">
+              <video controls preload="metadata" poster={assetPath(documentation.video.poster)}>
+                <source src={assetPath(documentation.video.src)} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="video-badge">
+                <PlayCircle size={18} />
+                Process Video
+              </div>
+            </div>
+            <div className="video-copy">
+              <p className="card-eyebrow">Featured Documentation</p>
+              <h3>{documentation.video.title}</h3>
+              <p>{documentation.video.caption}</p>
+            </div>
+          </article>
+
+          <div className="documentation-gallery">
+            {documentation.gallery.map((item, index) => (
+              <a
+                key={item.src}
+                href={assetPath(item.src)}
+                target="_blank"
+                rel="noreferrer"
+                className={index === 4 ? "doc-card doc-card-wide group" : "doc-card group"}
+              >
+                <img src={assetPath(item.src)} alt={item.title} loading="lazy" />
+                <div className="doc-overlay">
+                  <span>
+                    <Image size={14} />
+                    {item.label}
+                  </span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ObjectiveSection() {
+  return (
+    <section className="section-wrap">
+      <div className="objective-panel">
+        <div>
+          <p className="eyebrow">Career Objective</p>
+          <h2>Ready to contribute in publishing, production, and operational support environments.</h2>
+          <p>{careerObjective}</p>
+        </div>
+        <div className="hire-panel">
+          <p className="eyebrow">Why Hire Me</p>
+          <h3>Reasons to consider this profile</h3>
+          <ul>
+            {reasonsToHire.map((reason) => (
+              <li key={reason}>
+                <CheckCircle2 size={18} />
+                <span>{reason}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section id="contact" className="contact-section">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        <div>
+          <p className="eyebrow">Contact</p>
+          <h2>Open to interviews and international opportunities.</h2>
+          <p>
+            I am available for recruitment discussions, interviews, and entry-level opportunities where discipline,
+            quality awareness, and reliability matter. I am ready to explain my work experience, motivation, and
+            adaptability in a professional conversation.
+          </p>
+        </div>
+
+        <div className="contact-card">
+          <a href={`mailto:${profile.email}`}>
+            <Mail size={19} />
+            <span>{profile.email}</span>
+          </a>
+          <a href={`https://wa.me/${profile.whatsapp}`}>
+            <Phone size={19} />
+            <span>{profile.phone}</span>
+          </a>
+          <div>
+            <MapPin size={19} />
+            <span>{profile.location}</span>
+          </div>
+          <a href={assetPath(profile.cvUrl)} className="btn-primary mt-2" download>
+            Download Editable CV
+            <Download size={18} />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-7 text-sm md:flex-row">
+        <p>© {new Date().getFullYear()} {profile.name}. Professional Portfolio.</p>
+        <a href="#">Back to top</a>
+      </div>
+    </footer>
+  );
+}
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-white text-zinc-950">
+      <Navbar />
+      <main>
+        <Hero />
+        <ProfileSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <DocumentationSection />
+        <ObjectiveSection />
+        <ContactSection />
+      </main>
+      <Footer />
+      <a href="#" className="scroll-top" aria-label="Back to top">
+        <ArrowUp size={20} />
+      </a>
+    </div>
+  );
+}
