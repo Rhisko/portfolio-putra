@@ -48,7 +48,7 @@ function Navbar() {
           <span className="brand-mark">PS</span>
           <span>
             <span className="block text-base font-black leading-5 text-zinc-950">{profile.shortName}</span>
-            <span className="block text-xs font-black uppercase text-zinc-500">Professional Portfolio</span>
+            <span className="block text-xs font-black uppercase text-zinc-500">Lifelong Learners</span>
           </span>
         </a>
 
@@ -141,7 +141,7 @@ function Hero() {
               <img src={assetPath(profile.profilePhoto)} alt={`${profile.name} profile portrait`} />
             </div>
             <div className="portrait-caption">
-              <span>Professional Profile</span>
+              <span>Keep Moving Forward</span>
               <strong>{profile.role}</strong>
             </div>
           </div>
