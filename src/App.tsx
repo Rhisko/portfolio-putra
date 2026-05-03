@@ -105,7 +105,7 @@ function Hero() {
     <section className="hero-section">
       <div className="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="text-white">
-          <p className="hero-pill">Field Discipline | Production Quality | Global Career Potential</p>
+          <p className="hero-pill">FCAW & SMAW Welder | Safety Mindset | Quality Workmanship</p>
           <h1 className="mt-6 text-5xl font-black leading-none md:text-7xl">{profile.name}</h1>
           <p className="mt-5 max-w-3xl text-2xl font-black text-[color:var(--cv-yellow)] md:text-3xl">
             {profile.positioning}
@@ -186,8 +186,8 @@ function SkillsSection() {
       <div className="section-wrap">
         <SectionHeader
           eyebrow="Skills"
-          title="Technical skills translated into operational value."
-          copy="This portfolio highlights transferable strengths so welding experience reads as relevant, credible, and useful for recruiters, HR teams, and hiring managers across publishing or production-driven companies."
+          title="Welding capability supported by disciplined field execution."
+          copy="This portfolio highlights practical welding skills, safety awareness, SOP compliance, and work character that matter to recruiters, supervisors, and hiring managers seeking reliable welders."
         />
         <div className="grid gap-5 lg:grid-cols-3">
           {skills.map((group, index) => {
@@ -261,8 +261,8 @@ function ProjectsSection() {
       <div className="section-wrap">
         <SectionHeader
           eyebrow="Project Highlights"
-          title="Field experience reframed as professional case studies."
-          copy="Because there are no publishing projects yet, technical work is positioned as evidence of work character, process quality, and adaptability."
+          title="Welding experience presented as proof of workmanship."
+          copy="These highlights translate field documentation into recruiter-friendly evidence of quality consistency, safety discipline, teamwork, and readiness for welder opportunities."
         />
         <div className="grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
@@ -348,7 +348,7 @@ function ObjectiveSection() {
       <div className="objective-panel">
         <div>
           <p className="eyebrow">Career Objective</p>
-          <h2>Ready to contribute in publishing, production, and operational support environments.</h2>
+          <h2>Ready to contribute as a disciplined and safety-minded welder.</h2>
           <p>{careerObjective}</p>
         </div>
         <div className="hire-panel">
@@ -374,11 +374,11 @@ function ContactSection() {
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 lg:grid-cols-[1fr_0.85fr] lg:items-center">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>Open to interviews and international opportunities.</h2>
+          <h2>Open to welder opportunities and interviews.</h2>
           <p>
-            I am available for recruitment discussions, interviews, and entry-level opportunities where discipline,
-            quality awareness, and reliability matter. I am ready to explain my work experience, motivation, and
-            adaptability in a professional conversation.
+            I am available for recruitment discussions, interviews, and welder opportunities where safety, quality,
+            discipline, and reliable execution matter. I am ready to explain my welding experience, training, and
+            work readiness in a professional conversation.
           </p>
         </div>
 

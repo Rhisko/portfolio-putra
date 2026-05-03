@@ -2,9 +2,9 @@ export const profile = {
   name: "Putra Shahara Vely",
   shortName: "Putra Shahara",
   role: "Welder FCAW GS 3G/4G",
-  positioning: "Operations, Quality & Production Support Candidate",
+  positioning: "Professional Welder Candidate | FCAW & SMAW",
   headline:
-    "A field-trained professional with strong discipline, attention to detail, safety awareness, and the adaptability to grow across publishing, production, and operational environments.",
+    "A trained welder with FCAW and SMAW experience, strong safety awareness, disciplined work habits, and a quality-focused mindset for industrial fabrication and project-based welding environments.",
   location: "Bengkong Polisi, Batam",
   birthplace: "Payakumbuh",
   birthDate: "06 January 2000",
@@ -28,34 +28,34 @@ export const navigation = [
 export const highlights = [
   { value: "FCAW", label: "GS 3G/4G" },
   { value: "SMAW", label: "3G/4G & 6G" },
-  { value: "2022-2025", label: "PT Toyo Kanetsu Indonesia experience" },
-  { value: "Global-ready", label: "Professional English positioning" }
+  { value: "2022-2025", label: "Industrial welding experience" },
+  { value: "Safety-first", label: "PPE, SOP, and quality awareness" }
 ];
 
 export const about = {
-  title: "A technical field background shaped into a professional corporate profile.",
+  title: "A welder profile built on discipline, safety, and consistent workmanship.",
   paragraphs: [
-    "I am Putra Shahara Vely, a professional with hands-on welding experience and formal training through PT Global Sarana Internusa. This background has shaped the way I work: disciplined, precise, safety-minded, organized, and used to following technical instructions with care.",
-    "I am interested in building a career in publishing, production, and operational support because these environments value accuracy, coordination, consistency, documentation, and process discipline. I bring a strong field-work foundation that can support quality control, document handling, production assistance, and operational execution in a professional setting."
+    "I am Putra Shahara Vely, a trained welder with hands-on experience at PT Toyo Kanetsu Indonesia and formal welding training through PT Global Sarana Internusa. My background has shaped the way I work: disciplined, precise, safety-minded, organized, and used to following technical instructions with care.",
+    "I am currently seeking welder opportunities where I can contribute to fabrication, construction, maintenance, or industrial project environments. I bring a practical field-work foundation, a willingness to follow standards, and a consistent focus on safe execution and clean welding results."
   ]
 };
 
 export const values = [
   {
     title: "Detail-oriented",
-    description: "Experienced in checking work details, technical standards, and output quality before handing work to the next stage."
+    description: "Experienced in checking welding details, technical standards, and output quality before handing work to the next stage."
   },
   {
     title: "Process discipline",
-    description: "Understands the importance of SOPs, safety, workflow sequence, and consistent daily execution."
+    description: "Understands the importance of SOPs, PPE, welding procedure discipline, and consistent daily execution."
   },
   {
     title: "Coachability",
-    description: "Ready to receive instructions, learn from senior team members, and adapt to company targets and working culture."
+    description: "Ready to receive instructions from supervisors or senior welders and adapt to project standards and working culture."
   },
   {
     title: "Reliability",
-    description: "Brings a responsible field-work mindset, pressure tolerance, and a strong focus on completing tasks properly."
+    description: "Brings a responsible field-work mindset, pressure tolerance, and a strong focus on completing welding tasks properly."
   }
 ];
 
@@ -72,7 +72,7 @@ export const skills = [
     ]
   },
   {
-    category: "Transferable Skills",
+    category: "Work Execution Skills",
     items: [
       "Attention to detail",
       "Field problem solving",
@@ -130,13 +130,13 @@ export const training = [
 
 export const projects = [
   {
-    title: "Quality Consistency in Technical Work",
+    title: "Quality Consistency in Welding Work",
     challenge:
       "Welding work requires consistent results even when tasks are technical, repetitive, and quality-sensitive.",
     process:
       "I developed a routine of checking work instructions, preparing tools, maintaining area focus, and reviewing results before moving work forward.",
     result:
-      "This habit is relevant to quality control, prepress support, document checking, and publishing production workflows that require clean output."
+      "This habit supports cleaner welding output, better handover quality, and stronger confidence during inspection or next-stage production."
   },
   {
     title: "SOP Compliance and Safety Mindset",
@@ -145,16 +145,16 @@ export const projects = [
     process:
       "I followed instructions carefully, worked with caution, and prioritized safe process execution before speed.",
     result:
-      "This approach supports operational roles that require SOP compliance, document accuracy, and cross-team coordination."
+      "This approach supports welding roles that require PPE discipline, SOP compliance, hazard awareness, and coordination with fitters, supervisors, or QA/QC teams."
   },
   {
-    title: "Adapting Field Experience to Corporate Environments",
+    title: "Readiness for Project-Based Welding Environments",
     challenge:
-      "Moving into a new field requires translating previous experience into relevant value, not simply listing technical work history.",
+      "Project-based welding environments require workers who can follow instructions, adapt to site expectations, and maintain quality under pressure.",
     process:
-      "Field experience is positioned as evidence of discipline, reliability, coachability, and readiness to learn new business processes.",
+      "My field experience demonstrates discipline, reliability, coachability, and readiness to learn project-specific procedures and welding standards.",
     result:
-      "The profile becomes stronger for junior operations, production support, warehouse support, document control assistant, or quality support roles."
+      "This profile is suitable for welder opportunities in fabrication, industrial projects, workshop production, construction support, or maintenance work."
   }
 ];
 
@@ -222,11 +222,11 @@ export const documentation = {
 };
 
 export const careerObjective =
-  "I aim to build a long-term career in publishing, production, or operational environments by supporting workflow execution, maintaining work quality, learning company processes, and contributing with consistency. I am ready to begin in support roles such as production support, quality support, warehouse or operations support, document control assistant, or junior production administration.";
+  "I aim to build a long-term career as a professional welder by contributing to safe, disciplined, and quality-focused welding work. I am ready for welder opportunities in fabrication, industrial projects, workshop production, construction support, or maintenance environments where technical discipline, teamwork, and reliable execution are valued.";
 
 export const reasonsToHire = [
-  "Brings a disciplined field-work mindset with pressure tolerance and result orientation.",
-  "Used to following standards, instructions, SOPs, and supervisor direction.",
-  "Shows organized, honest, responsible, and coachable working character.",
-  "Ready to learn publishing or production workflows while maintaining a strong work ethic."
+  "Trained in FCAW GS 3G/4G, SMAW GS 3G/4G, and SMAW 6G.",
+  "Brings a disciplined field-work mindset with safety awareness and result orientation.",
+  "Used to following technical instructions, SOPs, and supervisor direction.",
+  "Shows organized, honest, responsible, and coachable working character."
 ];
