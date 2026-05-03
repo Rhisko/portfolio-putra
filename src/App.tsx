@@ -453,7 +453,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-7 text-sm md:flex-row">
-        <p>© {new Date().getFullYear()} {profile.name}. Professional Portfolio.</p>
+        <p>© {new Date().getFullYear()} {profile.name}. Keep Moving Forward.</p>
         <a href="#">Back to top</a>
       </div>
     </footer>
