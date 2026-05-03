@@ -165,7 +165,7 @@ body {
   }
 
   .portrait-frame {
-    @apply relative z-10 h-[570px] overflow-hidden rounded-lg border border-white/20 bg-zinc-950;
+    @apply relative z-10 h-[560px] overflow-hidden rounded-lg border border-white/20 bg-zinc-950;
     background:
       linear-gradient(135deg, rgba(255, 195, 26, 0.18), transparent 42%),
       linear-gradient(180deg, var(--cv-charcoal), var(--cv-black));
@@ -174,15 +174,18 @@ body {
   .portrait-frame::after {
     @apply pointer-events-none absolute inset-0 content-[''];
     background:
-      linear-gradient(180deg, transparent 44%, rgba(0, 0, 0, 0.42)),
-      radial-gradient(circle at 50% 18%, transparent 28%, rgba(0, 0, 0, 0.12));
+      linear-gradient(180deg, rgba(16, 19, 16, 0.08), transparent 34%, rgba(0, 0, 0, 0.52)),
+      linear-gradient(90deg, rgba(32, 36, 33, 0.45), transparent 22%, transparent 78%, rgba(32, 36, 33, 0.45)),
+      radial-gradient(circle at 50% 18%, transparent 24%, rgba(0, 0, 0, 0.18));
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   }
 
   .portrait-frame img {
     @apply h-full w-full object-cover;
-    object-position: 50% 8%;
-    filter: saturate(0.68) contrast(1.06) brightness(0.94);
+    object-position: 50% 5%;
+    filter: saturate(0.54) contrast(1.08) brightness(0.92);
+    transform: scale(1.48);
+    transform-origin: top center;
   }
 
   .portrait-caption {
@@ -614,7 +617,7 @@ body {
 
 @media (max-width: 1024px) {
   .portrait-frame {
-    height: 520px;
+    height: 500px;
   }
 }
 
@@ -624,7 +627,11 @@ body {
   }
 
   .portrait-frame {
-    height: 470px;
+    height: 440px;
+  }
+
+  .portrait-frame img {
+    transform: scale(1.42);
   }
 
   .portrait-caption {
