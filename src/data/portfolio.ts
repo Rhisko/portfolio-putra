@@ -249,7 +249,7 @@ export const projects = [
 export const documentation = {
   title: "Visual documentation from field work and training environments.",
   intro:
-    "Field documentation showing technical execution, safety equipment usage, teamwork, and quality-focused welding practice.",
+    "Work and training documentation that presents Putra's technical execution, safety awareness, teamwork, and commitment to consistent welding quality.",
   video: {
     src: "/media/welding-documentation.mp4",
     poster: "/media/welding-process-01.jpeg",

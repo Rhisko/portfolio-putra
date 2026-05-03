@@ -306,7 +306,7 @@ function ProjectsSection() {
         <SectionHeader
           eyebrow="Project Highlights"
           title="Welding experience presented as proof of workmanship."
-          copy="Field documentation shows quality consistency, safety discipline, teamwork, and readiness to contribute in fabrication, workshop, construction, maintenance, or industrial welding environments."
+          copy="A selection of hands-on welding work that reflects disciplined execution, quality awareness, safety focus, and readiness for fabrication, workshop, construction, maintenance, or industrial welding roles."
         />
         <div className="grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
